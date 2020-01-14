@@ -10,3 +10,10 @@ num = int(num)
 
 # YOUR CODE HERE
 
+while True:
+    if num % 2 == 0:
+        print("Even!")
+        break
+    elif num % 2 != 0:
+        print("Odd!")
+        break
