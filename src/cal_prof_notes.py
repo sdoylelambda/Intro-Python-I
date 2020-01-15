@@ -19,34 +19,38 @@ and does the following:
    Then exit the program.
 """
 
-
 import sys
 import calendar
 from datetime import datetime
 
+
+
+# Get the arguments
 args = sys.argv
+
 today = datetime.now()
 month = today.month
 year = today.year
 
+
 tc = calendar.TextCalendar()
 
-if len(args)  == 1:
+
+# If there are no arguments,
+if len(args) == 1:
+    # print calendar for current month
     tc.prmonth(year, month)
-elif len(args)  == 2:
+# If there's 1 arg,
+elif len(args) == 2:
+    # assume it's the month and print cal for that month
     month = int(args[1])
     tc.prmonth(year, month)
+# If there's 2 args, assume it's the month/year
 elif len(args) == 3:
+    # print cal for that month/year
     month = int(args[1])
     year = int(args[2])
     tc.prmonth(year, month)
 else:
-    print("input should be : 14_cal.py month[year]")
-
-
-
-
-
-
-
+    print("Input should be in this format: `14_cal.py month [year]`")
 

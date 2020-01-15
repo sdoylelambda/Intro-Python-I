@@ -4,9 +4,31 @@ def is_leap(year):
     if year % 4 == 0 and year % 100 == 0 and year % 400 == 0:
         leap = True
         print("leap1", leap)
-        return leap
+
     print("leap2",leap)
     return leap
+
+
+
+def is_leap(year):
+    leap = False
+    # Write your logic here
+    if(year % 4) == 0:
+        if(year % 100) == 0:
+            if(year % 400) == 0:
+                leap = True
+            else:
+                leap = False
+        else:
+            leap = True
+    else:
+        leap = False
+    return leap
+
+
+
+
+
 
 print("1990", is_leap(1990))
 print("2000", is_leap(2000))

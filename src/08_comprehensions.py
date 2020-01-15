@@ -46,3 +46,18 @@ while x % 2 == 0:
 y = []
 
 print(y)
+
+
+
+nums = list(range(10))
+# same as below
+# evens = [ FORMATING,    COLLECTION,    FILTER  ]
+evens = [str(num) for num in nums if num % 2 == 0]
+
+
+
+evens = []
+for num in nums:
+    if num % 2 == 0:
+        evens.append(num)
+
